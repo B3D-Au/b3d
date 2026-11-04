@@ -7,7 +7,6 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* Blue Hour Color Palette Theme */
         body { 
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; 
             background: linear-gradient(135deg, #0b111e 0%, #05070c 100%); 
@@ -18,7 +17,6 @@
         
         .container { max-width: 1000px; margin: 0 auto; }
         
-        /* Header Section Styling - No Sharp Edges */
         header { 
             text-align: center; 
             margin-bottom: 50px; 
@@ -31,10 +29,8 @@
         h1 { color: #60a5fa; font-size: 2.8rem; margin-bottom: 12px; letter-spacing: -0.5px; }
         .subtitle { color: #94a3b8; font-size: 1.15rem; line-height: 1.6; max-width: 650px; margin: 0 auto; }
         
-        /* Grid Showcase Layout */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px; }
         
-        /* Content Card Styling */
         .card { 
             background: #111827; 
             border-radius: 20px; 
@@ -54,7 +50,6 @@
         .card-title { font-size: 1.3rem; margin-bottom: 8px; color: #f8fafc; font-weight: 600; }
         .card-short { color: #94a3b8; font-size: 0.95rem; line-height: 1.5; }
 
-        /* Smooth Interactive Popup Window */
         .modal { 
             display: none; 
             position: fixed; 
@@ -82,7 +77,6 @@
         .modal-title { font-size: 1.75rem; margin-bottom: 14px; color: #60a5fa; }
         .modal-desc { color: #cbd5e1; font-size: 1.05rem; line-height: 1.6; white-space: pre-line; }
         
-        /* Rounded Exit Button */
         .close-btn { 
             position: absolute; 
             top: 15px; right: 20px; 
@@ -109,36 +103,35 @@
     </header>
     
     <div class="grid">
-        <!-- DEMO ITEM 1 -->
-        <div class="card" onclick="openModal('classroom.jpg', 'Teacher & Classroom Models', 'We help educators bring abstract lessons into physical reality.\n\nFrom high-quality geometric shapes, atom variations, and historical architectural replicas, to custom classroom organization tools. Send us your requested design files or MakerWorld links for an instant setup.')">
-            <img src="classroom.jpg" alt="Classroom Models">
+        <!-- Item 1 - Cat Earring -->
+        <div class="card" onclick="openModal('classroom.jpg.png', 'Teacher & Classroom Models', 'We help educators bring abstract lessons into physical reality.\n\nFrom high-quality geometric shapes, atom variations, and historical architectural replicas, to custom classroom organization tools. Send us your requested design files or MakerWorld links for an instant setup.')">
+            <img src="classroom.jpg.png" alt="Classroom Models">
             <div class="card-content">
                 <div class="card-title">Teacher & Classroom Aids</div>
                 <div class="card-short">Click to view our print capabilities for schools and educators...</div>
             </div>
         </div>
 
-        <!-- DEMO ITEM 2 -->
-        <div class="card" onclick="openModal('makerworld.jpg', 'MakerWorld Integrations', 'Found a design blueprint you love? We support almost the entire open library on MakerWorld.\n\nSimply share the model link with us via word of mouth or message. We will match the filaments, dial in the custom parameters, and manage the technical slicing steps for you.')">
-            <img src="makerworld.jpg" alt="MakerWorld Integrations">
-            <div class="card-content">
-                <div class="card-title">MakerWorld Library Support</div>
-                <div class="card-short">Click to see how to request and submit external models...</div>
-            </div>
-        </div>
-
-        <!-- DEMO ITEM 3 -->
-        <div class="card" onclick="openModal('custom.jpg', 'Bespoke Custom Prints', 'Have a unique fix, prototype blueprint, mechanical component part, or decorative layout in mind?\n\nOur custom printing options cater directly to individual projects. We focus on durable, meticulously inspected, small-batch manufacturing with personalized service.')">
-            <img src="custom.jpg" alt="Custom Pieces">
+        <!-- Item 2 - Hummingbird -->
+        <div class="card" onclick="openModal('custom.jpg.png', 'Bespoke Custom Prints', 'Have a unique fix, prototype blueprint, mechanical component part, or decorative layout in mind?\n\nOur custom printing options cater directly to individual projects. We focus on durable, meticulously inspected, small-batch manufacturing with personalized service.')">
+            <img src="custom.jpg.png" alt="Custom Pieces">
             <div class="card-content">
                 <div class="card-title">Custom Commissions</div>
                 <div class="card-short">Click to explore custom material limits and personalized orders...</div>
             </div>
         </div>
+
+        <!-- Item 3 - Moon Lamp -->
+        <div class="card" onclick="openModal('makerworld.jpg.png', 'MakerWorld Integrations', 'Found a design blueprint you love? We support almost the entire open library on MakerWorld.\n\nSimply share the model link with us via word of mouth or message. We will match the filaments, dial in the custom parameters, and manage the technical slicing steps for you.')">
+            <img src="makerworld.jpg.png" alt="MakerWorld Integrations">
+            <div class="card-content">
+                <div class="card-title">MakerWorld Library Support</div>
+                <div class="card-short">Click to see how to request and submit external models...</div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Popup Window -->
 <div id="detailsModal" class="modal" onclick="closeModal(event)">
     <span class="close-btn" onclick="document.getElementById('detailsModal').style.display='none'">&times;</span>
     <div class="modal-content" onclick="event.stopPropagation()">
